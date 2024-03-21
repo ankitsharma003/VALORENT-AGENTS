@@ -1,109 +1,329 @@
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    background-image: url(./image/Valorant-Konsol.webp);
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(./image/Valorant-Konsol.webp);
+  overflow-x: hidden;
 
-    background-attachment: fixed;
-    animation: fade 2s ease;
-    height: 100vh;
-    color: white;
-  }
+  background-attachment: fixed;
+  animation: fade 2s ease;
+  height: 100vh;
+  color: white;
+}
 
-  .navbar {
-    width: 100%;
-    height: 40px;
-    background: #111;
-    animation: fade 2.5s ease;
-    position: fixed;
-    top: 0px;
+.navbar {
+  width: 100%;
+  height: 40px;
+  animation: fade 2.5s ease;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  animation: fade 2.5s ease;
+
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  animation: fade 2.5s ease;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  animation: fade 2.5s ease;
+
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.menu span {
+  font-size: 30px;
+  margin: 10px 5px;
+  animation: fade 2.5s ease;
+
+  padding: 0px 0px 10px 0px;
+}
+.menu img {
+  margin-top: 5px;
+  animation: fade 2.5s ease;
+}
+.menu {
+  position: fixed;
+  cursor: pointer;
+  animation: fade 2.5s ease;
+
+  right: 10px;
+}
+.logo {
+  width: 100%;
+  max-width: 550px;
+  position: absolute;
+  bottom: 40%;
+  left: 30%;
+  animation: fadelog 2s ease;
+}
+.logo h1 {
+  font-size: 100px;
+}
+.content {
+  margin-top: 100vh;
+}
+.item {
+  width: 100%;
+  height: 80vh;
+  padding: 30px 0px;
+  margin: 0px 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.item-content {
+  width: 500px;
+  padding: 10px 100px;
+  color: #111;
+}
+.item-content h1 {
+  font-size: 100px;
+}
+.item-content p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.itemcontainer img {
+  margin-top: 10px;
+  width: 250px;
+}
+.content h1 {
+  font-size: 40px;
+}
+.abox {
+  background-color: rgb(255, 71, 71);
+}
+.bbox {
+  background-color: rgb(255, 228, 21);
+}
+.cbox {
+  background-color: rgb(63, 249, 255);
+}
+.download-container {
+  height: 100vh;
+  background: transparent;
+  margin-top: 10%;
+}
+.install h1,
+.install button {
+  position: absolute;
+  left: 6%;
+}
+.install h1 {
+  width: 400px;
+  font-size: 60px;
+  margin-top: 6%;
+}
+.install button {
+  height: 50px;
+  background-color: rgb(255, 71, 71);
+  margin-top: 25%;
+  outline: none;
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.Footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  height: 100vh;
+}
+
+.footerimg p {
+  font-weight: 900;
+  font-size: 45px;
+}
+
+.social_icon {
+  display: flex;
+  gap: 20px;
+}
+.socialimg {
+  padding: 13px;
+  padding-bottom: 7px;
+  transition: 0.3s ease-in;
+}
+.socialimg:hover {
+  scale: 1.2;
+}
+.cpoyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 35%;
+}
+@media (max-width: 901px) {
+  .footerimg p {
+    font-size: 15px;
   }
-  .sidenav {
-    height: 100%;
+  .footerimg img {
+    width: 210px;
+    margin-left: 15px;
+  }
+  .Footer ul {
+    font-size: 15px;
+    gap: 10px;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    backdrop-filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    backdrop-filter: blur(0px);
+    background: url(./image/Valorant-Konsol.webp);
+  }
+}
+
+@keyframes fadelog {
+  0% {
     width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
+    opacity: 0;
     background-color: #111;
-    overflow-x: hidden;
-    padding-top: 60px;
-    animation: fade 2.5s ease;
-
-    transition: 0.5s;
   }
-
+  100% {
+    width: 550px;
+    opacity: 1;
+  }
+}
+@media (max-width: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
   .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    animation: fade 2.5s ease;
-  }
-
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  .sidenav .closebtn {
-    position: absolute;
-    animation: fade 2.5s ease;
-
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  .menu span {
-    font-size: 30px;
-    margin: 10px 5px;
-    animation: fade 2.5s ease;
-
-    padding: 0px 0px 10px 0px;
-  }
-  .menu img {
-    margin-top: 5px;
-    animation: fade 2.5s ease;
-  }
-  .menu {
-    position: fixed;
-    cursor: pointer;
-    animation: fade 2.5s ease;
-
-    right: 10px;
+    font-size: 18px;
   }
   .logo {
     width: 100%;
-    max-width: 550px;
+    max-width: 290px;
     position: absolute;
-    bottom: 40%;
-    left: 30%;
-    animation: fadelog 2s ease;
+    bottom: 50%;
+    left: 10%;
   }
   .logo h1 {
-    font-size: 100px;
-  }
-  .content {
-    margin-top: 100vh;
+    font-size: 50px;
   }
   .item {
-    width: 100%;
+    width: 60vw;
     height: 80vh;
     padding: 30px 0px;
-    margin: 0px 200px;
+    margin: 0px 100px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
   }
   .item-content {
-    width: 500px;
-    padding: 10px 100px;
+    width: 320px;
+    padding: 10px 50px;
     color: #111;
   }
   .item-content h1 {
-    font-size: 100px;
+    font-size: 40px;
+  }
+  .item-content p {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .itemcontainer img {
+    margin-top: 10px;
+    width: 200px;
+  }
+  .download-container {
+    height: 70vh;
+    background: transparent;
+  }
+  .install h1,
+  .install button {
+    position: absolute;
+    left: 6%;
+  }
+  .install h1 {
+    width: 400px;
+    font-size: 50px;
+    margin-top: 6%;
+  }
+  .install button {
+    height: 50px;
+    background-color: rgb(255, 71, 71);
+    margin-top: 65%;
+  }
+}
+@media (max-width: 851px) {
+  body {
+    background-image: url(./image/Valorant-Konsol.webp);
+
+    background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+    height: 50vh;
+  }
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+  .content {
+    margin-top: 70vh;
+  }
+  .logo {
+    width: 100%;
+    max-width: 400px;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+  }
+  .logo h1 {
+    font-size: 70px;
+  }
+  .item {
+    width: 80vw;
+    height: 80vh;
+    padding: 30px 0px;
+    margin: 0px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .item-content {
+    width: 520px;
+    padding: 10px 50px;
+    color: #111;
+  }
+  .item-content h1 {
+    font-size: 60px;
   }
   .item-content p {
     font-size: 20px;
@@ -113,249 +333,23 @@
     margin-top: 10px;
     width: 250px;
   }
-  .content h1 {
-    font-size: 40px;
-  }
-  .abox {
-    background-color: rgb(255, 71, 71);
-  }
-  .bbox {
-    background-color: rgb(255, 228, 21);
-  }
-  .cbox {
-    background-color: rgb(63, 249, 255);
-  }
   .download-container {
-    height: 100vh;
+    height: 70vh;
     background: transparent;
-    margin-top: 10%;
   }
   .install h1,
   .install button {
     position: absolute;
     left: 6%;
   }
-  .install h1{
+  .install h1 {
     width: 400px;
-    font-size: 60px;
+    font-size: 50px;
     margin-top: 6%;
   }
-  .install button{
-
+  .install button {
     height: 50px;
     background-color: rgb(255, 71, 71);
-    margin-top:25% ;
-    outline: none;
-    font-size: 30px;
-    border: none;
-    padding: 10px;
-    border-radius: 2px;
-    cursor: pointer;
+    margin-top: 45%;
   }
-  .Footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    height: 100vh;
 }
-
-.footerimg p{
-    font-weight: 900;
-    font-size: 45px;
-}
-
-.social_icon{
-    display: flex;
-    gap: 20px;
-}
-.socialimg{
-    padding: 13px;
-    padding-bottom: 7px;
-    transition: 0.3s ease-in;
-}
-.socialimg:hover{
-    scale: 1.2;
-}
-.cpoyright{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    margin-bottom: 35%;
-}
-@media (max-width: 901px) {
-    .footerimg p{
-        font-size: 15px;
-    }
-  .footerimg img{
-    width: 210px;
-    margin-left: 15px;
-  }
-  .Footer ul{
-    font-size: 15px;
-    gap: 10px;
-  }
-  }
-
-
-
-
-
-
-  @keyframes fade {
-    0% {
-      background: #111;
-    }
-    100% {
-      background: url(./image/Valorant-Konsol.webp);
-    }
-  }
-
-  @keyframes fadelog {
-    0% {
-      width: 0;
-      opacity: 0;
-    }
-    100% {
-      width: 550px;
-      opacity: 1;
-    }
-  }
-  @media (max-width: 450px) {
-    .sidenav {
-      padding-top: 15px;
-    }
-    .sidenav a {
-      font-size: 18px;
-    }
-    .logo {
-      width: 100%;
-      max-width: 290px;
-      position: absolute;
-      bottom: 50%;
-      left: 10%;
-    }
-    .logo h1 {
-      font-size: 50px;
-    }
-    .item {
-      width: 60vw;
-      height: 80vh;
-      padding: 30px 0px;
-      margin: 0px 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .item-content {
-      width: 320px;
-      padding: 10px 50px;
-      color: #111;
-    }
-    .item-content h1 {
-      font-size: 40px;
-    }
-    .item-content p {
-      font-size: 17px;
-      font-weight: 500;
-    }
-    .itemcontainer img {
-      margin-top: 10px;
-      width: 200px;
-    }
-    .download-container {
-      height: 70vh;
-      background: transparent;
-    }
-    .install h1,
-    .install button {
-      position: absolute;
-      left: 6%;
-    }
-    .install h1{
-      width: 400px;
-      font-size: 50px;
-      margin-top: 6%;
-    }
-    .install button{
-  
-      height: 50px;
-      background-color: rgb(255, 71, 71);
-      margin-top:65% ;
-    }
-  }
-  @media (max-width: 851px) {
-    body {
-      background-image: url(./image/Valorant-Konsol.webp);
-  
-      background-attachment: fixed; /* Keeps the background image fixed while scrolling */
-      height: 50vh;
-    }
-    .sidenav {
-      padding-top: 15px;
-    }
-    .sidenav a {
-      font-size: 18px;
-    }
-    .content{
-      margin-top: 70vh;
-    }
-    .logo {
-      width: 100%;
-      max-width: 400px;
-      position: absolute;
-      top: 25%;
-      left: 30%;
-    }
-    .logo h1 {
-      font-size: 70px;
-    }
-    .item {
-      width: 80vw;
-      height: 80vh;
-      padding: 30px 0px;
-      margin: 0px 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .item-content {
-      width: 520px;
-      padding: 10px 50px;
-      color: #111;
-    }
-    .item-content h1 {
-      font-size: 60px;
-    }
-    .item-content p {
-      font-size: 20px;
-      font-weight: 500;
-    }
-    .itemcontainer img {
-      margin-top: 10px;
-      width: 250px;
-    }
-    .download-container {
-      height: 70vh;
-      background: transparent;
-    }
-    .install h1,
-    .install button {
-      position: absolute;
-      left: 6%;
-    }
-    .install h1{
-      width: 400px;
-      font-size: 50px;
-      margin-top: 6%;
-    }
-    .install button{
-  
-      height: 50px;
-      background-color: rgb(255, 71, 71);
-      margin-top:45% ;
-    }
-  }
